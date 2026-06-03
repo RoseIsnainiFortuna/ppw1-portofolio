@@ -1,0 +1,74 @@
+<?php
+
+session_start();
+
+// KONFIGURASI KONEKSI DATABASE
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "praktikum_crud";
+
+// Buat koneksi
+$conn = mysqli_connect($host, $username, $password, $database);
+
+// Cek koneksi
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+
+// FUNGSI-FUNGSI AUTENTIKASI
+
+//Cek apakah user sudah login
+function isLoggedIn() {
+    return isset($_SESSION['user_id']);
+}
+
+// Redirect ke login jika belum login
+function requireLogin() {
+    if (!isLoggedIn()) {
+        header("Location: login.php");
+        exit();
+    }
+}
+
+// FUNGSI-FUNGSI FILE HANDLING
+// Fungsi upload foto dengan validasi
+function uploadFile($file, $target_dir = "uploads/mahasiswa/") {
+    $imageFileType = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+
+    // Validasi ukuran (max 5MB)
+    if ($file["size"] > 5000000) {
+        return [
+            'success' => false,
+            'message' => 'File terlalu besar. Maks 5MB.'
+        ];
+    }
+
+    // Validasi format
+    $allowed = ["jpg", "jpeg", "png", "gif"];
+    if (!in_array($imageFileType, $allowed)) {
+        return [
+            'success' => false,
+            'message' => 'Format tidak didukung.'
+        ];
+    }
+
+    // Generate nama file unik agar tidak tabrakan
+    $new_filename = uniqid() . "." . $imageFileType;
+    $target_file = $target_dir . $new_filename;
+
+    if (move_uploaded_file($file["tmp_name"], $target_file)) {
+        return ['success' => true, 'filename' => $new_filename];
+    }
+
+    return ['success' => false, 'message' => 'Gagal upload file.'];
+}
+
+// Fungsi hapus file foto
+function deleteFile($filename, $dir = "uploads/mahasiswa/") {
+    if ($filename && file_exists($dir . $filename)) {
+        unlink($dir . $filename);
+    }
+}
+
+?>
