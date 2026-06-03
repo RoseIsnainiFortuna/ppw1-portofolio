@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran</title>
+</head>
+<style>
+    .container {
+            width: 30%;
+            max-width: 800px; /* Lebar maksimal form */
+            margin: 0 auto;   /* Membuat kontainer berada di tengah (Center) */
+            background-color: #1e0a0acb; /* Warna biru muda sesuai gambar Anda */
+            padding: 30px;
+            border-radius: 8px; /* Membuat sudut sedikit melengkung */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Memberikan sedikit bayangan */
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            color: #fff;
+    }
+
+    input, select, div {
+        width: 100%;
+    }
+</style>
+<body style="margin: 0; display: flex; flex-direction: column; min-height: 100vh; background-color: rgb(161, 96, 96);">
+    <header style="background-color: rgb(125, 199, 224); height: 18vh; background-color: rgb(85, 26, 26); padding-left: 20px; text-align: center; color: #ffffff;">
+        <h1>PENDAFTARAN LOMBA KEMERDEKAAN</h1>
+        <P>Dalam rangka merayakan kemerdekaan Indonesia, kami karang taruna TRPL mengadakan berbagai lomba, Mari kita meriahkan dengan ikut lombaaaa!!!!!!</P>
+    </header>
+    <br><br>
+    <form action="/action_page.php" class="container"> 
+        <div>
+            <label for="fname">First Name</label><br/>
+            <input type="text" id="fname" name="fname" style="width: 100%;"><br><br>
+        </div>
+        <div>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" name="lname" style="width: 100%;"><br><br>
+        </div>
+        <div>
+            <label for="lahir">Tanggal Lahir</label><br>
+            <input type="date" id="lahir" name="lahir" style="width: 100%;" ><br><br>
+        </div>
+        <div>   
+            <label for="lomba">Lomba 1 yang diikuti</label><br>
+                <select id="lomba" name="lomba">
+                    <option value="volvo">makan kerupuk</option>
+                    <option value="saab">memasukkan kelereng</option>
+                    <option value="fiat">tangkap belut</option>
+                    <option value="audi">balap karung</option>
+                    <option value="audi">estafet air</option>
+                </select><br><br>
+        </div>
+        <div>
+            <label for="lomba">Lomba 2 yang diikuti</label><br>
+                <select id="lomba" name="lomba">
+                    <option value="volvo">makan kerupuk</option>
+                    <option value="saab">memasukkan kelereng</option>
+                    <option value="fiat">tangkap belut</option>
+                    <option value="audi">balap karung</option>
+                    <option value="audi">estafet air</option>
+                </select><br><br>
+        </div>
+        <div>
+            <label for="cv">Upload CV</label><br>
+            <input type="file" id="cv" name="cv"><br><br>
+        </div>
+        <div>
+            <button type="submit" onclick="alert('Anda diterima, persiapkan dirimu')">
+                Submit
+            </button>
+        </div>
+    </form>
+</body>
+</html>
