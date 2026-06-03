@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profil Mahasiswa</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .profile-header {
+        background: linear-gradient(135deg, #1a56db, #1e293b);
+      }
+      .avatar {
+        width: 100px;
+        height: 100px;
+        border: 4px solid white;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">TRPL 2024</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Beranda</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Mahasiswa</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Header Profil -->
+    <div class="profile-header text-white py-5">
+      <div class="container">
+        <div class="d-flex align-items-center gap-4">
+          <img src="foto mahasiswa.jpg" class="avatar" alt="Foto" />
+          <div>
+            <h2 class="mb-1">Anomali Terpal</h2>
+            <p class="mb-2 opacity-75">NIM: 2024001 | TRPL Semester 3</p>
+            <span class="badge bg-success">Aktif</span>
+            <span class="badge bg-info ms-1">Web Developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Konten Utama -->
+    <div class="container my-4">
+      <div class="row g-4">
+        <!-- Kolom Kiri: Info -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header fw-bold">Informasi Pribadi</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between">
+                <span class="text-muted">Email</span>
+                <span>anomali@mail.ugm.ac.id</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span class="text-muted">Kota</span>
+                <span>Yogyakarta</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between">
+                <span class="text-muted">Angkatan</span>
+                <span>2045</span>
+              </li>
+            </ul>
+          </div>
+          <br />
+          <div class="col-md-8">
+            <div class="card">
+              <div class="card-header fw-bold">Informasi Pribadi</div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item d-flex justify-content-between">
+                  <span class="text-muted">Total SKS</span>
+                  <span>20</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span class="text-muted">IPK</span>
+                  <span>4.00</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between">
+                  <span class="text-muted">Mata Kuliah </span>
+                  <span>All Lulus</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom Kanan: Nilai -->
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header fw-bold">Nilai Semester 2</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-hover mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th>No</th>
+                      <th>Mata Kuliah</th>
+                      <th>SKS</th>
+                      <th>Grade</th>
+                      <th>Score</th>
+                      <th>Detail</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>Pemrograman Web 1</td>
+                      <td>4</td>
+                      <td><span class="badge bg-success">A+</span></td>
+                      <td>4.00</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalWeb"
+                        >
+                          Detail
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>Praktikum Basis Data</td>
+                      <td>4</td>
+                      <td><span class="badge bg-success">A</span></td>
+                      <td>4.00</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#prakbasisdata"
+                        >
+                          Detail
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>Basis Data</td>
+                      <td>2</td>
+                      <td><span class="badge bg-warning">C</span></td>
+                      <td>3.00</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#basisdata"
+                        >
+                          Detail
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>Praktikum Struktur Data</td>
+                      <td>4</td>
+                      <td><span class="badge bg-info">B</span></td>
+                      <td>3.50</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#psd"
+                        >
+                          Detail
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>Praktikum PBO</td>
+                      <td>4</td>
+                      <td><span class="badge bg-success">A</span></td>
+                      <td>4.00</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#ppbo"
+                        >
+                          Detail
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>Pemrograman Berbasis Objek</td>
+                      <td>2</td>
+                      <td><span class="badge bg-danger">D</span></td>
+                      <td>2.75</td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-primary"
+                          data-bs-toggle="modal"
+                          data-bs-target="#pbo"
+                        >
+                          Detail
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalWeb"
+      tabindex="-1"
+      aria-labelledby="detailModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title" id="detailModalLabel">
+              Detail Mata Kuliah
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Pemrograman Web 1</h6>
+            <hr />
+            <p>
+              <strong>Deskripsi:</strong> Mempelajari dasar-dasar pengembangan
+              web menggunakan HTML5, CSS3, dan dasar JavaScript.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Dosen:</strong> Achmad Choirudin Emcha. S.Kom., M.Eng.
+              </li>
+              <li class="list-group-item">
+                <strong>Ruang:</strong> HU 112 Laboratorium RPL 7
+              </li>
+              <li class="list-group-item">
+                <strong>Jadwal:</strong> Rabu, 07:30 - 10:55
+              </li>
+              <li class="list-group-item">
+                <strong>Status:</strong> On Progress
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="prakbasisdata" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Detail Mata Kuliah</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Praktikum Basis Data</h6>
+            <hr />
+            <p>
+              <strong>Deskripsi:</strong> Fokus pada implementasi SQL, pembuatan
+              tabel, dan manipulasi data di Oracle SQL.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Dosen:</strong> Firma Syahrian, S.Kom., M.Cs.
+              </li>
+              <li class="list-group-item">
+                <strong>Ruang:</strong> HU 107 Laboratorium RPL 2
+              </li>
+              <li class="list-group-item">
+                <strong>Jadwal:</strong> Rabu, 12.15 - 15.55
+              </li>
+              <li class="list-group-item">
+                <strong>Status:</strong> On Progress
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="basisdata" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Detail Mata Kuliah</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Basis Data</h6>
+            <hr />
+            <p>
+              <strong>Deskripsi:</strong> Mata kuliah ini membahas konsep
+              penyimpanan data yang terstruktur secara permanen. Materi mencakup
+              perancangan model data menggunakan Entity Relationship Diagram
+              (ERD), teknik normalisasi untuk menghindari redundansi, serta
+              penguasaan bahasa SQL (Structured Query Language) untuk melakukan
+              operasi Create, Read, Update, dan Delete (CRUD) pada sistem
+              manajemen basis data Oracle SQL.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Dosen:</strong> Firma Syahrian, S.Kom., M.Cs.
+              </li>
+              <li class="list-group-item">
+                <strong>Ruang:</strong> R. KULIAH HU 207
+              </li>
+              <li class="list-group-item">
+                <strong>Jadwal:</strong> Senin, 12.15 - 13.55
+              </li>
+              <li class="list-group-item">
+                <strong>Status:</strong> On Progress
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="psd" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Detail Mata Kuliah</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Praktikum Struktur Data</h6>
+            <hr />
+            <p>
+              <strong>Deskripsi:</strong> Implementasi yang berfokus pada cara
+              mengorganisir dan menyimpan data secara efisien di memori
+              komputer. Mahasiswa akan mengimplementasikan struktur data klasik
+              secara manual maupun menggunakan library, seperti Linked List,
+              Stack (tumpukan), Queue (antrean), hingga algoritma pengurutan
+              (sorting) dan pencarian (searching).
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Dosen:</strong> Firma Syahrian, S.Kom., M.Cs.
+              </li>
+              <li class="list-group-item">
+                <strong>Ruang:</strong> HU 104 Laboratorium RPL 4
+              </li>
+              <li class="list-group-item">
+                <strong>Jadwal:</strong> Kamis, 12.15 - 15.55
+              </li>
+              <li class="list-group-item">
+                <strong>Status:</strong> On Progress
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="ppbo" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Detail Mata Kuliah</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Praktikum PBO</h6>
+            <hr />
+            <p>
+              <strong>Deskripsi:</strong> Implementasi langsung dari teori PBO.
+              Di sini, mahasiswa akan melatih kemampuan coding dengan memecahkan
+              studi kasus nyata menggunakan IDE (seperti IntelliJ atau
+              NetBeans). Fokus utama praktikum adalah pembuatan kelas,
+              manipulasi objek, penanganan error (Exception Handling), hingga
+              pembuatan antarmuka pengguna grafis (GUI) sederhana.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Dosen:</strong> Dr. Imam Fahrurrozi, S.T.,M.Cs.
+              </li>
+              <li class="list-group-item">
+                <strong>Ruang:</strong> HU 104 Laboratorium RPL 4
+              </li>
+              <li class="list-group-item">
+                <strong>Jadwal:</strong> Kamis, 07:30 - 10:55
+              </li>
+              <li class="list-group-item">
+                <strong>Status:</strong> On Progress
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="pbo" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header bg-primary text-white">
+            <h5 class="modal-title">Detail Mata Kuliah</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6>Pemrograman Berorientasi Objek</h6>
+            <hr />
+            <p>
+              <strong>Deskripsi:</strong> Fokus pada paradigma pemrograman
+              berbasis objek menggunakan bahasa Java. Mahasiswa akan mempelajari
+              konsep fundamental seperti Encapsulation (pembungkusan data),
+              Inheritance (pewarisan), dan Polymorphism (banyak bentuk).
+              Tujuannya adalah agar mahasiswa mampu membangun aplikasi yang
+              modular, reusable, dan mudah dikelola secara sistematis.
+            </p>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Dosen:</strong> Dr. Imam Fahrurrozi, S.T.,M.Cs.
+              </li>
+              <li class="list-group-item">
+                <strong>Ruang:</strong> R. KULIAH HU 208
+              </li>
+              <li class="list-group-item">
+                <strong>Jadwal:</strong> Selasa, 12:15 - 13:55
+              </li>
+              <li class="list-group-item">
+                <strong>Status:</strong> On Progress
+              </li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
