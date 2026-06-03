@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas3</title>
+    <style>
+        :root {
+    /* Palet Warna Utama */
+    --primary-color: rgb(222, 114, 38);
+    --bg-light: #f3f3f3;
+    --text-dark: #000;
+    --transition-speed: 0.5s;
+        }
+        
+        .body {
+            margin: 0;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .gird {
+            display: flex;
+            gap: 60px;
+            /* list-style: none; */
+            /* padding: 0; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            
+        }
+        .card {
+            position: relative;
+            display: flex;
+            /* color: #000; */
+            /* text-decoration: none;  */
+            align-items: center;
+            justify-content: center;
+            /* padding: 10; */
+            background-color: var(--primary-color);
+            width: 130px;
+            height: 40px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.5s;
+            overflow: hidden;
+            perspective: 1000px;
+        }
+        .card a {
+            text-decoration: none;
+            color: black;
+        }
+        .card:hover {
+            background-color: yellow;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transform: rotateY(180deg)
+            
+        }
+        .card:hover a {
+            transform: rotateY(180deg);
+        }
+
+        .loader {
+            /* display: none; */
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; 
+            border: 3px solid #f3f3f3; 
+            border-top: 8px solid rgb(222, 114, 38);
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg); /* Posisi awal */
+            }
+            to {
+                transform: rotate(360deg); /* Berputar penuh */
+            }
+        }
+
+        .fadein {
+            display: flex;
+            /* align-items: center;
+            margin-bottom: 0; */
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            /* Animasi Fade In */
+            animation: fadeInAnimation var(--transition-speed) ease-in forwards;
+            background-color: rgb(134, 206, 206);
+            width: 150px;
+            height: 50px;
+            border-radius: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes fadeInAnimation {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 3;
+            }
+}
+    </style>
+</head>
+<!-- Animation & Transition — Komponen Interaktif
+Buat halaman berisi komponen interaktif berikut:
+Minimal 3 tombol dengan efek hover berbeda menggunakan transition (warna, transform, box-shadow)
+Sebuah loading spinner menggunakan @keyframes dan animation
+Sebuah elemen yang fade in saat halaman dibuka menggunakan animasi opacity
+Gunakan CSS Variables untuk mendefinisikan palet warna dan gunakan di seluruh file
+⭐Bonus: Tambahkan animasi pada kartu yang berputar saat di-hover menggunakan transform: rotateY() -->
+<body class="body">
+    
+    <div class="gird">
+        <div style="display: flex; gap: 60px;">
+            <div class="card"><a href="#" class="a"><b>Card 1</b></a></div>
+            <div class="card"><a href="#" class="a"><b>Card 2</b></a></div>
+            <div class="card"><a href="#" class="a"><b>Card 3</b></a></div>
+        </div>
+
+        <div class="fadein">fade in</div>
+        <div class="loader"></div>
+    </div>
+    
+    
+</body>
+</html>

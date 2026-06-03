@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas2</title>
+    <style>
+        body {
+            margin: 0px;
+            background-color: #fcfdfe;
+        }
+        .navbar {
+            position: sticky;
+            display: flex;
+            z-index: 1000;
+            padding: 12px 20px;
+            font-weight: bold;
+            justify-content: space-between;
+            align-items:center;    
+            background: linear-gradient(to right, #101828, #1a2a47); 
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);              
+        }
+        img {
+            width: 85px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 30px;
+            margin: 0 auto; 
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+        }
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            padding: 20px;
+        }
+        .card {
+            flex: 1;
+            min-width: 120px;
+            background: white;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.1);
+        }
+        .footer {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+            background-color: rgba(255,255,255,0.8);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .kolom {
+            display: flex;
+            color: #000;
+            text-decoration: none; 
+            align-items: center;
+            justify-content: center;
+            padding: 10;
+            background-color: rgb(222, 114, 38);
+            width: 130px;
+            height: 40px;
+            border-radius: 8px;
+            font-weight: bold 
+        }
+        @media (max-width: 480px){
+            body {
+                margin: 0px;
+                padding-top: 180px; 
+                padding-bottom: 80px; 
+                box-sizing: border-box;
+            }
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+        
+                /* Kunci di atas */
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+        
+                z-index: 1000;
+                padding: 15px 0; /* Memberi ruang antar elemen di dalam navbar */
+                box-sizing: border-box;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                padding: 0;
+                margin: 10px 0 0 0;
+            }
+            .footer {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                background-color: aliceblue;
+                padding: 15px;
+        
+                /* Kunci di bawah */
+                position: fixed; /* Gunakan fixed, bukan absolute agar selalu di bawah layar */
+                bottom: 0;
+                left: 0;
+                right: 0;
+        
+                z-index: 1000;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .card-grid {
+                padding-bottom: 20px;
+            }
+        }
+    </style>
+    <!-- Flexbox — Halaman Landing Sederhana
+Buat landing page dengan struktur berikut menggunakan Flexbox:
+Navbar: Logo di kiri, menu di kanan, menggunakan justify-content: space-between
+Hero Section: Teks di kiri, gambar/ilustrasi di kanan menggunakan Flexbox
+Card Grid: Minimal 3 kartu produk/fitur yang menggunakan flex-wrap: wrap
+Footer: 3 kolom dengan Flexbox dan gap
+⭐
+Bonus: Tambahkan @media query agar layout berubah menjadi satu kolom di layar kecil -->
+</head>
+<body>
+    <nav class="navbar">
+        <img src="logo ugm.png" alt="logo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="hero">
+            <p>A cartoon is a form of visual art, usually humorous or satirical, featuring simplified drawings and exaggerated features</p>
+            <img src="cartoon.png" alt="cartoon">
+        </div>
+        <div class="card-grid">
+            <div class="card"><h3>🎯 Card 1</h3><p>Flexbox layout</p></div>
+            <div class="card"><h3>🚀 Card 2</h3><p>Responsive otomatis</p></div>
+            <div class="card"><h3>✨ Card 3</h3><p>Dengan gap & wrap</p></div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="kolom">aaa</div>
+        <div class="kolom">aaa</div>
+        <div class="kolom">aaa</div>
+    </footer>
+</body>
+</html>

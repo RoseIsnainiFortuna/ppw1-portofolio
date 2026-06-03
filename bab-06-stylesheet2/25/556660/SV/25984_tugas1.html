@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas1</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .navbar {
+            position: sticky;
+            display: flex;
+            background-color: rgb(20, 6, 6);
+            color: aliceblue;
+            padding: 12px 20px;
+            font-weight: bold;
+            z-index: 10;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: aliceblue;
+            text-decoration: none;
+        }
+
+        .container {
+            position: relative;
+            width: 280px;
+            height: 350px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px;
+            margin: 0 auto;   
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+        .status {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 10px;
+        }
+        .card {
+            /* flex: 1; */
+            min-width: 110px;
+            background: rgb(232, 197, 197);
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.436);  
+        }
+        .back {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            margin-right: 20px;
+            margin-bottom: 20px;
+
+        }
+
+        button{
+             background-color: rgb(178, 11, 11);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h2>Hi</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </nav>
+    </header>
+    <br><br>
+    <div class="container">
+        <div class="status"><h3>Online🟢</h3></div>
+        <div class="card">
+            <img src="fotopersonal.jpeg" alt="foto" width="100%">
+            <p>Salwa Dyah Nafla dan Kaori Emanurung, persahabatan yang sudah terjalin selama 1 semester</p><br>
+            <p>Mahasiswa asal Sumatera, engineer TRPL UGM</p>
+        </div>
+        <div class="back"><button><h3>Back to Top</h3></button></div>
+    </div>
+</body>
+</html>
